@@ -109,17 +109,17 @@ var deadline = new Date(Date.parse(new Date()) + 15 * 24 * 60 * 60 * 1000);
 initializeClock('clockdiv', deadline);
 
 function animateValue( ) {
-    var end=300000;
+    var end=3000;
     var start=0;
     var duration=5000;
     var range = end-start;
     var current = start;
-    var increment = end > start? 125 : -1;
+    var increment = end > start? 1: -1;
     var stepTime = Math.abs(Math.floor(duration / range));
     var obj = document.getElementById('n1');
     var timer = setInterval(function() {
         current += increment;
-        obj.innerHTML = " $ "+current;
+        obj.innerHTML = "  "+current+"+";
         if (current == end) {
             clearInterval(timer);
         }
