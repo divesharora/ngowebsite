@@ -1,0 +1,141 @@
+
+body{
+    margin: 0;
+    font-family: 'Alegreya Sans SC', sans-serif;
+overflow-x: hidden;
+}
+@import url(https://fonts.googleapis.com/css?family=Alegreya+Sans+SC:900);
+
+
+header {
+  background: url(resources/holding_hands.jpg);
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color:white;
+  height: 100vh;
+}
+ .head1 {
+  
+  font-size: 40px;
+  color: red;
+  mix-blend-mode: screen;
+  padding: 0;
+  margin: 0;
+  line-height: 0.5;
+  padding: 10%;
+}
+
+.navbar{
+    background: rgb(255,0,0,0.4);
+    padding: 10px;
+    
+}
+.navbar li{
+    display: inline;
+   padding: 10px;
+    color: white;
+}
+.mainlogo{
+    font-size: xx-large;
+}
+.mainlogo li{
+    float: left;
+    font-weight: bolder;
+    font-size: x-large;
+    
+}
+.fr li{
+    float: right;
+}
+a{
+    text-decoration: none;
+    color:inherit;
+}
+hr{
+    width: 100%;
+    height: 1px;
+}
+.div1{
+    height: 100%;
+    background-image: url(resources/index2.jpg);
+    background-color: rgb(255,0,0,0.5);
+    background-blend-mode: multiply;
+    height: max-content;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color:white;
+}
+.timer{
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 150%;
+    align-content: center;
+    text-align: center;
+    padding: 40px;
+}
+#clockdiv{
+	font-family: sans-serif;
+	color: #fff;
+	display: inline-block;
+	font-weight: 100;
+	text-align: center;
+	font-size: 30px;
+}
+
+#clockdiv > div{
+	padding: 10px;
+	border-radius: 3px;
+	display: inline-block;
+}
+
+#clockdiv div > span{
+	padding: 15px;
+	border-radius: 3px;
+	display: inline-block;
+}
+
+.smalltext{
+	padding-top: 5px;
+	font-size: 16px;
+}
+.desc{
+    text-align: center;
+    font-size: 400%;
+    padding: 20px;
+   margin: 0;
+}
+.btn1{
+    font-size: x-large;
+    color: white;
+    font-family: inherit;
+    background:rgb(0,0,0,0.4);
+    border: none;
+    padding:20px;
+    margin: 30px;
+    border-radius:10px ;
+}
+.btn1:hover{
+    background: rgb(0,0,0);
+    cursor: pointer;
+    transition: ease-in-out 0.5s;
+}
+
+
+.footer .footer-down{
+    background:rgba(206, 200, 200, 0.5);
+    color:white;
+    height:50px;
+    position: relative;
+    width:100%;
+    text-align:center;
+    padding-top:20px;
+    bottom:0px; 
+    left:0px;
+
+
+
+}

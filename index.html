@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FestWebsite</title>
+    <link rel="stylesheet" href="index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body onload="animateValue()">
+    <header>
+        <nav class="navbar">
+            <li class="mainlogo">SIW</li>
+           <span class="fr">
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">Login</a></li>
+            <li><a href="#">Sign Up</a></li>
+           <li> <a href="#">Home</a></li>
+         </span> 
+       
+        </nav>
+       <div class="head1" >
+        <h1>We Care.</h1>
+        <h1>Families Helped : <span id="n1" style="color:aliceblue;">5</span> </h1>
+       </div>
+       
+
+    </header>
+   <div class="div1">
+   
+    <p class="desc">Get ready to witness the biggest sensation of 2020.</p>
+    <div class="timer">
+        <h1>Fun begins in:</h1>
+        <div id="clockdiv">
+            <div>
+              <span class="days"></span>
+              <div class="smalltext">Days</div>
+            </div>
+            <div>
+              <span class="hours"></span>
+              <div class="smalltext">Hours</div>
+            </div>
+            <div>
+              <span class="minutes"></span>
+              <div class="smalltext">Minutes</div>
+            </div>
+            <div>
+              <span class="seconds"></span>
+              <div class="smalltext">Seconds</div>
+            </div>
+          </div>
+          <div class="timer">
+            <button class="btn1" href="#">Upcoming Events</button>
+            <button class="btn1" href="#">Register</button>
+
+          </div>
+   
+</div> 
+<div class="footer">
+        <div class="footer-down">
+            &copy;vitfest.com | Designed by Divesh & Hemang 
+        </div>
+    
+</div>
+    
+</body>
+<script>
+    function getTimeRemaining(endtime) {
+  var t = Date.parse(endtime) - Date.parse(new Date());
+  var seconds = Math.floor((t / 1000) % 60);
+  var minutes = Math.floor((t / 1000 / 60) % 60);
+  var hours = Math.floor((t / (1000 * 60 * 60)) % 24);
+  var days = Math.floor(t / (1000 * 60 * 60 * 24));
+  return {
+    'total': t,
+    'days': days,
+    'hours': hours,
+    'minutes': minutes,
+    'seconds': seconds
+  };
+}
+
+function initializeClock(id, endtime) {
+  var clock = document.getElementById(id);
+  var daysSpan = clock.querySelector('.days');
+  var hoursSpan = clock.querySelector('.hours');
+  var minutesSpan = clock.querySelector('.minutes');
+  var secondsSpan = clock.querySelector('.seconds');
+
+  function updateClock() {
+    var t = getTimeRemaining(endtime);
+
+    daysSpan.innerHTML = t.days;
+    hoursSpan.innerHTML = ('0' + t.hours).slice(-2);
+    minutesSpan.innerHTML = ('0' + t.minutes).slice(-2);
+    secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
+
+    if (t.total <= 0) {
+      clearInterval(timeinterval);
+    }
+  }
+
+  updateClock();
+  var timeinterval = setInterval(updateClock, 1000);
+}
+
+var deadline = new Date(Date.parse(new Date()) + 15 * 24 * 60 * 60 * 1000);
+initializeClock('clockdiv', deadline);
+
+function animateValue( ) {
+    var end=300000;
+    var start=0;
+    var duration=5000;
+    var range = end-start;
+    var current = start;
+    var increment = end > start? 125 : -1;
+    var stepTime = Math.abs(Math.floor(duration / range));
+    var obj = document.getElementById('n1');
+    var timer = setInterval(function() {
+        current += increment;
+        obj.innerHTML = " $ "+current;
+        if (current == end) {
+            clearInterval(timer);
+        }
+    }, stepTime);
+}
+</script>
+</html>
